@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+</head>
+<body>
+    <div id="elements">
+
+    </div>
+</body>
+   <script>
+        /* lst=[
+            {
+                name:"Hector",
+                age:34
+            },
+            {
+                name:"Francisco",
+                age:40
+            }
+        ]
+        localStorage.setItem("list",JSON.stringify(lst)) */
+        lst=JSON.parse(localStorage.getItem("list"))
+        lst.forEach(element=>{
+            let elements=document.getElementById("elements")
+            let div=document.createElement("div")
+            div.innerHTML=element.name+" "+element.age
+            elements.appendChild(div)
+        })
+   </script>
+</html>
