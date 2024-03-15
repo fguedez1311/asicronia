@@ -17,7 +17,7 @@
                 $li.innerHTML=`${el.name}--${el.email}--${el.phone}`
                 $fragment.appendChild($li)
             })
-            $xhr.appendChild($fragment)
+            $xhr.appendChild($fragment) 
 
         }
         else{
